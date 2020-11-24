@@ -42,3 +42,4 @@ typedef struct tagLineInfo
 	LINEPOS tLeftPos;
 	LINEPOS tRightPos;
 }LINEINFO;
+

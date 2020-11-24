@@ -1,12 +1,13 @@
 #pragma once
 
-#define WINCX 800
-#define WINCY 600
+#define WINCX 1720
+#define WINCY 640
 
 #define TILECX	130
 #define TILECY	68
 #define TILEX	20
 #define TILEY	30
+
 
 #define Vec3 D3DXVECTOR3
 

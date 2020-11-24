@@ -16,7 +16,7 @@ public:
 	virtual HRESULT Ready_GameObject();
 	virtual int Update_GameObject();
 	virtual void Late_Update_GameObject();
-	virtual void Render_GameObject(HDC hDC);
+	virtual void Render_GameObject(/*HDC hDC*/);
 	virtual void Release_GameObject();
 
 public:
@@ -34,6 +34,10 @@ private:
 	float	m_fJumpPower;
 	float	m_fJumpTime;
 	float	m_fJumpY;
+
+private:
+	DWORD	m_dwFrameTime;
+	int		m_iFrame;
 
 private:
 	D3DXVECTOR3 m_vP[4];

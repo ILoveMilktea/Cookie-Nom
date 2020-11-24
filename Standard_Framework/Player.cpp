@@ -4,9 +4,12 @@
 #include "Obj.h"
 #include "KeyMgr.h"
 #include "LineMgr.h"
+#include "Texture_Manager.h"
+#include "Graphic_Device.h"
 
 CPlayer::CPlayer()
 	:m_bJump(false), m_fJumpPower(0.f), m_fJumpTime(0.f), m_fJumpY(0.f)
+	,m_dwFrameTime(0),m_iFrame(0)
 {
 }
 
@@ -70,10 +73,42 @@ void CPlayer::Late_Update_GameObject()
 {
 }
 
-void CPlayer::Render_GameObject(HDC hDC)
+void CPlayer::Render_GameObject(/*HDC hDC*/)
 {
 	Update_Rect();
-	Rectangle(hDC, m_tRect.left, m_tRect.top, m_tRect.right, m_tRect.bottom);
+	//Rectangle(hDC, m_tRect.left, m_tRect.top, m_tRect.right, m_tRect.bottom);
+
+
+	if (m_dwFrameTime + 100 < GetTickCount())
+	{
+		++m_iFrame;
+		if (m_iFrame >= 4)
+			m_iFrame = 0;
+
+		m_dwFrameTime = GetTickCount();
+	}
+
+	const TEXINFO* pTexInfo = CTexture_Manager::Get_Instance()->Get_TexInfo(L"Player", L"Player_Run", m_iFrame);
+
+	if (nullptr == pTexInfo)
+	{
+		return;
+	}
+	UINT iCenterX = pTexInfo->tImageInfo.Width >> 1;
+	UINT iCenterY = pTexInfo->tImageInfo.Height >> 1;
+	D3DXMATRIX matScale, matRotZ, matTrans, matWorld;
+	D3DXMatrixScaling(&matScale, 2.f, 2.f, 0.f);
+	//D3DXMatrixRotationZ(&matRotZ, D3DXToRadian(m_fAngle));
+	//D3DXMatrixTranslation(&matTrans, 60.f * (i % 5 + 1), 60.f * (i / 5 + 1), 0.f);
+	matWorld = matScale/* * matRotZ * matTrans*/;
+
+	CGraphic_Device::Get_Instance()->Get_Sprite()->SetTransform(&matWorld);
+
+	//RECT rc = { 0, 0, 100, 100 }; 
+	//CGraphic_Device::Get_Instance()->Get_Sprite()->Draw(pTexInfo->pTexture, &rc, &D3DXVECTOR3(float(iCenterX), float(iCenterY), 0.f), &D3DXVECTOR3(400.f, 300.f, 0.f), D3DCOLOR_ARGB(255, 255, 255, 255));
+	CGraphic_Device::Get_Instance()->Get_Sprite()->Draw(pTexInfo->pTexture, nullptr/*&rc*/, &D3DXVECTOR3(float(iCenterX), float(iCenterY), 0.f), nullptr/*&D3DXVECTOR3(400.f, 300.f, 0.f)*/, D3DCOLOR_ARGB(255, 255, 255, 255));
+
+
 }
 
 void CPlayer::Release_GameObject()

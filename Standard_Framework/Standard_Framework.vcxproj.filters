@@ -31,6 +31,21 @@
     <Filter Include="98. Manager\04.LineMgr">
       <UniqueIdentifier>{a22f6e4c-ba38-4ed5-99bc-d5f3c2339cfb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="03. Texture">
+      <UniqueIdentifier>{82f69dbe-2535-46f4-a7f1-25a826ccbe11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Texture\99. Graphic_Device">
+      <UniqueIdentifier>{94149ce0-2aca-498b-ba7c-9e2e5640af59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Texture\02. Multi">
+      <UniqueIdentifier>{63851c18-cc7d-48b2-ad58-aab3a5b4d140}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Texture\01. Single">
+      <UniqueIdentifier>{463a56f5-53e5-4b85-a166-8c7dd47a15d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\02. Obstacle">
+      <UniqueIdentifier>{96771b4c-7422-411f-a0ef-27f737d00875}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -67,6 +82,24 @@
     <ClInclude Include="LineMgr.h">
       <Filter>98. Manager\04.LineMgr</Filter>
     </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>03. Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture_Manager.h">
+      <Filter>98. Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Single_Texture.h">
+      <Filter>03. Texture\01. Single</Filter>
+    </ClInclude>
+    <ClInclude Include="Multi_Texture.h">
+      <Filter>03. Texture\02. Multi</Filter>
+    </ClInclude>
+    <ClInclude Include="Obstacle.h">
+      <Filter>01. Object\02. Obstacle</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic_Device.h">
+      <Filter>03. Texture\99. Graphic_Device</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -98,6 +131,24 @@
     </ClCompile>
     <ClCompile Include="LineMgr.cpp">
       <Filter>98. Manager\04.LineMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>03. Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture_Manager.cpp">
+      <Filter>98. Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Single_Texture.cpp">
+      <Filter>03. Texture\01. Single</Filter>
+    </ClCompile>
+    <ClCompile Include="Multi_Texture.cpp">
+      <Filter>03. Texture\02. Multi</Filter>
+    </ClCompile>
+    <ClCompile Include="Obstacle.cpp">
+      <Filter>01. Object\02. Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic_Device.cpp">
+      <Filter>03. Texture\99. Graphic_Device</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

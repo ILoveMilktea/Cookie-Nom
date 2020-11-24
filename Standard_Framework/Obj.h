@@ -13,7 +13,7 @@ public:
 	virtual HRESULT Ready_GameObject() PURE;
 	virtual int Update_GameObject() PURE;
 	virtual void Late_Update_GameObject() PURE;
-	virtual void Render_GameObject(HDC hDC) PURE;
+	virtual void Render_GameObject(/*HDC hDC*/) PURE;
 	virtual void Release_GameObject() PURE;
 
 public:
@@ -91,6 +91,8 @@ protected:
 
 	int		m_iHP;
 	int		m_iMaxHP;
+
+
 };
 
 #endif // !__OBJ_H__

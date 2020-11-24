@@ -70,12 +70,12 @@ void CObjMgr::Late_Update()
 	}
 }
 
-void CObjMgr::Render(HDC _DC)
+void CObjMgr::Render(/*HDC _DC*/)
 {
 	for (int i = 0; i < OBJID::END; ++i)
 	{
 		for (auto& pObj : m_listObj[i])
-			pObj->Render_GameObject(_DC);
+			pObj->Render_GameObject();
 	}
 }
 

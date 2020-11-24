@@ -1,5 +1,9 @@
-﻿  Player.cpp
-  KeyMgr.cpp
+﻿  Obstacle.cpp
+c:\users\82108\documents\visual studio 2015\projects\cookie-nom\standard_framework\obstacle.cpp(35): warning C4244: '=': 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\82108\documents\visual studio 2015\projects\cookie-nom\standard_framework\obstacle.cpp(38): warning C4244: '=': 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\82108\documents\visual studio 2015\projects\cookie-nom\standard_framework\obstacle.cpp(42): warning C4244: '=': 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  MainApp.cpp
+c:\users\82108\documents\visual studio 2015\projects\cookie-nom\standard_framework\mainapp.cpp(89): warning C4244: '인수': 'UINT'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   코드를 생성하고 있습니다...
-  Standard_Framework.vcxproj -> D:\Visual Studio 2015\Projects\Standard_Framework\Debug\Standard_Framework.exe
-  Standard_Framework.vcxproj -> D:\Visual Studio 2015\Projects\Standard_Framework\Debug\Standard_Framework.pdb (Full PDB)
+  Standard_Framework.vcxproj -> C:\Users\82108\Documents\Visual Studio 2015\Projects\Cookie-Nom\Debug\Standard_Framework.exe
+  Standard_Framework.vcxproj -> C:\Users\82108\Documents\Visual Studio 2015\Projects\Cookie-Nom\Debug\Standard_Framework.pdb (Full PDB)
