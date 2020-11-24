@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="00. MainApp">
+      <UniqueIdentifier>{523dbd4e-0b82-4251-87b3-6e2e18fbc5c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99. Default">
+      <UniqueIdentifier>{01eac99b-b923-499f-9239-9a72d0d256da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98. Manager">
+      <UniqueIdentifier>{19f5afa1-1579-45a7-aad3-dfaf4f0c73c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object">
+      <UniqueIdentifier>{dbe119f4-f733-474d-b8c1-a708813fff83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Object\01. Player">
+      <UniqueIdentifier>{a9b9af25-e6e8-4653-b7ba-ab940fb8b2e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Line">
+      <UniqueIdentifier>{7cec35e5-092d-4e3d-b02a-48250489f846}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98. Manager\01.ObjMgr">
+      <UniqueIdentifier>{5bee882f-a150-4960-966e-27b410df20ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98. Manager\CollisionMgr">
+      <UniqueIdentifier>{610f4c87-7a82-4f4a-9ac9-b72788a39baa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98. Manager\03.KeyMgr">
+      <UniqueIdentifier>{78d5158b-bf83-4cf2-aca4-57eb189faa57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98. Manager\04.LineMgr">
+      <UniqueIdentifier>{a22f6e4c-ba38-4ed5-99bc-d5f3c2339cfb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>99. Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>99. Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Client.h">
+      <Filter>99. Default</Filter>
+    </ClInclude>
+    <ClInclude Include="MainApp.h">
+      <Filter>00. MainApp</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>01. Object\01. Player</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Obj.h">
+      <Filter>01. Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Line.h">
+      <Filter>02.Line</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjMgr.h">
+      <Filter>98. Manager\01.ObjMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionMgr.h">
+      <Filter>98. Manager\CollisionMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyMgr.h">
+      <Filter>98. Manager\03.KeyMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="LineMgr.h">
+      <Filter>98. Manager\04.LineMgr</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>99. Default</Filter>
+    </ClCompile>
+    <ClCompile Include="MainApp.cpp">
+      <Filter>00. MainApp</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>01. Object\01. Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Client.cpp">
+      <Filter>99. Default</Filter>
+    </ClCompile>
+    <ClCompile Include="Obj.cpp">
+      <Filter>01. Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Line.cpp">
+      <Filter>02.Line</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjMgr.cpp">
+      <Filter>98. Manager\01.ObjMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionMgr.cpp">
+      <Filter>98. Manager\CollisionMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyMgr.cpp">
+      <Filter>98. Manager\03.KeyMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="LineMgr.cpp">
+      <Filter>98. Manager\04.LineMgr</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>99. Default</Filter>
+    </Image>
+    <Image Include="Standard_Framework.ico">
+      <Filter>99. Default</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt">
+      <Filter>99. Default</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Standard_Framework.rc">
+      <Filter>99. Default</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

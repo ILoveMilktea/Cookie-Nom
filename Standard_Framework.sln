@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Standard_Framework", "Standard_Framework\Standard_Framework.vcxproj", "{B6360934-02F7-4B44-BA31-A098A3E9ED99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Headers", "Headers", "{EF3E6790-F295-47EC-875C-CD27DCFF2A1F}"
+	ProjectSection(SolutionItems) = preProject
+		Headers\Include.h = Headers\Include.h
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFC_Tool", "MFC_Tool\MFC_Tool.vcxproj", "{51F395C2-FB87-4445-BD3F-44F54919D32D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Include", "Include", "{F4D3DB62-2363-4F43-B5A7-33BEB877913F}"
+	ProjectSection(SolutionItems) = preProject
+		Headers\AbstractFactory.h = Headers\AbstractFactory.h
+		Headers\Define.h = Headers\Define.h
+		Headers\Enum.h = Headers\Enum.h
+		Headers\Extern.h = Headers\Extern.h
+		Headers\Functor.h = Headers\Functor.h
+		Headers\Funtion.h = Headers\Funtion.h
+		Headers\Struct.h = Headers\Struct.h
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6360934-02F7-4B44-BA31-A098A3E9ED99}.Debug|x64.ActiveCfg = Debug|x64
+		{B6360934-02F7-4B44-BA31-A098A3E9ED99}.Debug|x64.Build.0 = Debug|x64
+		{B6360934-02F7-4B44-BA31-A098A3E9ED99}.Debug|x86.ActiveCfg = Debug|Win32
+		{B6360934-02F7-4B44-BA31-A098A3E9ED99}.Debug|x86.Build.0 = Debug|Win32
+		{B6360934-02F7-4B44-BA31-A098A3E9ED99}.Release|x64.ActiveCfg = Release|x64
+		{B6360934-02F7-4B44-BA31-A098A3E9ED99}.Release|x64.Build.0 = Release|x64
+		{B6360934-02F7-4B44-BA31-A098A3E9ED99}.Release|x86.ActiveCfg = Release|Win32
+		{B6360934-02F7-4B44-BA31-A098A3E9ED99}.Release|x86.Build.0 = Release|Win32
+		{51F395C2-FB87-4445-BD3F-44F54919D32D}.Debug|x64.ActiveCfg = Debug|x64
+		{51F395C2-FB87-4445-BD3F-44F54919D32D}.Debug|x64.Build.0 = Debug|x64
+		{51F395C2-FB87-4445-BD3F-44F54919D32D}.Debug|x86.ActiveCfg = Debug|Win32
+		{51F395C2-FB87-4445-BD3F-44F54919D32D}.Debug|x86.Build.0 = Debug|Win32
+		{51F395C2-FB87-4445-BD3F-44F54919D32D}.Release|x64.ActiveCfg = Release|x64
+		{51F395C2-FB87-4445-BD3F-44F54919D32D}.Release|x64.Build.0 = Release|x64
+		{51F395C2-FB87-4445-BD3F-44F54919D32D}.Release|x86.ActiveCfg = Release|Win32
+		{51F395C2-FB87-4445-BD3F-44F54919D32D}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F4D3DB62-2363-4F43-B5A7-33BEB877913F} = {EF3E6790-F295-47EC-875C-CD27DCFF2A1F}
+	EndGlobalSection
+EndGlobal
