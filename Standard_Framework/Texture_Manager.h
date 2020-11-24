@@ -29,6 +29,9 @@ private:
 	~CTexture_Manager();
 
 public:
+	void Initialize_Manager();
+
+public:
 	const TEXINFO* Get_TexInfo(const wstring& wstrObjectKey, const wstring& wstrStateKey = L"", const int & iIndex = 0);
 	HRESULT Insert_Texture_Manager(TEX_ID eTexID, const wstring& wstrFilePath, const wstring & wstrObjectKey, const wstring& wstrStateKey = L"", const int & iIndex = 0);
 	void Release_Texture_Manager();

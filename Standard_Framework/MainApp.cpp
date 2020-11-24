@@ -5,6 +5,9 @@
 #include "LineMgr.h"
 #include "KeyMgr.h"
 
+#include "Graphic_Device.h"
+#include "Texture_Manager.h"
+
 CMainApp::CMainApp()
 	:m_dwRespawn(0)
 {
@@ -24,6 +27,8 @@ HRESULT CMainApp::Ready_MainApp()
 	CObj* pPlayer = CPlayer::Create();
 	CObjMgr::Get_Instance()->Add_Object(OBJID::PLAYER, pPlayer);
 
+
+	CTexture_Manager::Get_Instance()->Initialize_Manager();	// 텍스쳐 추가
 	
 	return S_OK; // S_OK : Success OK, S붙으면 양수임, 성공시 반환하는 반환타입 / NOERROR;
 }
@@ -34,6 +39,7 @@ void CMainApp::Update_MainApp()
 
 }
 
+
 void CMainApp::Late_Update_MainApp()
 {
 	CObjMgr::Get_Instance()->Late_Update();
@@ -42,20 +48,43 @@ void CMainApp::Late_Update_MainApp()
 
 void CMainApp::Render_MainApp()
 {
-	HDC backbuffer = CreateCompatibleDC(m_hDC);
-	HBITMAP hOldBmp = CreateCompatibleBitmap(m_hDC, WINCX, WINCY);
-	hOldBmp = HBITMAP(SelectObject(backbuffer, hOldBmp));
 
-	Rectangle(backbuffer, 0, 0, WINCX, WINCY);
-	//m_pPlayer->Render_GameObject(backbuffer);
-	CObjMgr::Get_Instance()->Render(backbuffer);
+	CGraphic_Device::Get_Instance()->Render_Begin();
 
-	BitBlt(m_hDC, 0, 0, WINCX, WINCY, backbuffer, 0, 0, SRCCOPY);
+	//TCHAR szBuf[MAX_PATH] = L"";
+	//swprintf_s(szBuf, L"%d", iIndex);
+	const TEXINFO* pTexInfo = CTexture_Manager::Get_Instance()->Get_TexInfo(L"background");
+	UINT iCenterX = pTexInfo->tImageInfo.Width >> 1;
+	UINT iCenterY = pTexInfo->tImageInfo.Height >> 1;
 
-	CLineMgr::Get_Instance()->Render(m_hDC);
+	RECT rc = { 0, 0, WINCX, WINCY }; 
+	CGraphic_Device::Get_Instance()->Get_Sprite()->Draw(pTexInfo->pTexture, &rc, &D3DXVECTOR3(float(iCenterX), float(iCenterY), 0.f), &D3DXVECTOR3(iCenterX, iCenterY, 0.f), D3DCOLOR_ARGB(255, 255, 255, 255));
 
-	DeleteObject(SelectObject(backbuffer, hOldBmp));
-	DeleteDC(backbuffer);
+	CGraphic_Device::Get_Instance()->Render_End();
+
+	
+	// Multi texture 그리는건 MFC View -> Ondraw함수에 있는거 참조
+
+	// ====== 아래가 플레이어 그리는 코드 ====== 
+	// DC쓰면 위에서 렌더한거 위에 덮어써서 이제 DC 못써요
+
+
+	//HDC backbuffer = CreateCompatibleDC(m_hDC);
+	//HBITMAP hOldBmp = CreateCompatibleBitmap(m_hDC, WINCX, WINCY);
+	//hOldBmp = HBITMAP(SelectObject(backbuffer, hOldBmp));
+
+	////Rectangle(backbuffer, 0, 0, WINCX, WINCY);
+
+
+	////m_pPlayer->Render_GameObject(backbuffer);
+	//CObjMgr::Get_Instance()->Render(backbuffer);
+
+	//BitBlt(m_hDC, 0, 0, WINCX, WINCY, backbuffer, 0, 0, SRCCOPY);
+
+	//CLineMgr::Get_Instance()->Render(m_hDC);
+
+	//DeleteObject(SelectObject(backbuffer, hOldBmp));
+	//DeleteDC(backbuffer);
 }
 
 void CMainApp::Release_MainApp()
